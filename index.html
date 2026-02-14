@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name • Machine Learning Journey</title>
+    <meta name="description" content="Personal site to track my machine learning learning path, projects, and notes." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Top Nav -->
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand__dot"></span>
+          <span class="brand__text">Your Name</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <button id="menuBtn" class="nav__toggle" aria-expanded="false" aria-controls="navLinks">
+            ☰
+          </button>
+          <div id="navLinks" class="nav__links">
+            <a href="#learning">Learning</a>
+            <a href="#projects">Projects</a>
+            <a href="#notes">Notes</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main id="top">
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <h1>Machine Learning Journey</h1>
+            <p class="lead">
+              I’m learning machine learning on Coursera and building projects to turn theory into practice:
+              data prep, classical ML, and deep learning foundations.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn" href="#projects">See projects</a>
+              <a class="btn btn--ghost" href="#learning">Track learning</a>
+            </div>
+
+            <div class="hero__meta">
+              <div class="chip">Focus: Supervised ML</div>
+              <div class="chip">Tools: Python • NumPy • scikit-learn</div>
+              <div class="chip">Goal: Build + ship ML apps</div>
+            </div>
+          </div>
+
+          <aside class="hero__card" aria-label="Quick stats">
+            <div class="card">
+              <div class="card__title">This week</div>
+              <div class="stats">
+                <div class="stat">
+                  <div class="stat__num" id="hoursThisWeek">6</div>
+                  <div class="stat__label">Study hours</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__num" id="lessonsDone">8</div>
+                  <div class="stat__label">Lessons done</div>
+                </div>
+                <div class="stat">
+                  <div class="stat__num" id="streakDays">4</div>
+                  <div class="stat__label">Day streak</div>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="small">
+                Update these numbers in <code>script.js</code> (or later connect to a real tracker).
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Learning -->
+      <section id="learning" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2>Learning (Coursera)</h2>
+            <p class="muted">
+              What I’m studying right now, plus a roadmap of what’s next.
+            </p>
+          </div>
+
+          <div class="grid grid--2">
+            <div class="card">
+              <h3>Current course</h3>
+              <p>
+                <strong>Machine Learning Specialization</strong> (Coursera)
+                <br />
+                <span class="muted">Status: In progress</span>
+              </p>
+
+              <div class="progress">
+                <div class="progress__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="35">
+                  <div id="progressFill" class="progress__fill" style="width: 35%"></div>
+                </div>
+                <div class="progress__meta">
+                  <span id="progressText">35% complete</span>
+                  <button class="link" id="bumpProgressBtn" type="button">+5%</button>
+                </div>
+              </div>
+
+              <ul class="list">
+                <li>Linear regression, logistic regression</li>
+                <li>Regularization, bias/variance</li>
+                <li>Model evaluation and error analysis</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Next up</h3>
+              <ul class="timeline">
+                <li><span class="dot"></span> Feature engineering + pipelines</li>
+                <li><span class="dot"></span> Trees, ensembles (RF, XGBoost)</li>
+                <li><span class="dot"></span> Intro to neural networks</li>
+                <li><span class="dot"></span> Deploy a model behind an API</li>
+              </ul>
+              <p class="muted small">
+                Tip: keep each topic tied to a mini-project so the site stays “alive.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2>Projects</h2>
+            <p class="muted">Small, shippable builds that prove what I can do.</p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card project">
+              <div class="project__top">
+                <span class="badge">Beginner</span>
+                <span class="muted small">Regression</span>
+              </div>
+              <h3>House Price Predictor</h3>
+              <p class="muted">
+                Clean data, train a regression model, evaluate with RMSE, and explain feature importance.
+              </p>
+              <div class="project__links">
+                <a class="link" href="#" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="link" href="#" target="_blank" rel="noreferrer">Demo</a>
+              </div>
+            </article>
+
+            <article class="card project">
+              <div class="project__top">
+                <span class="badge">Intermediate</span>
+                <span class="muted small">Classification</span>
+              </div>
+              <h3>Spam Classifier</h3>
+              <p class="muted">
+                Text preprocessing, TF-IDF, logistic regression, precision/recall tuning, and error analysis.
+              </p>
+              <div class="project__links">
+                <a class="link" href="#" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="link" href="#" target="_blank" rel="noreferrer">Demo</a>
+              </div>
+            </article>
+
+            <article class="card project">
+              <div class="project__top">
+                <span class="badge">Planned</span>
+                <span class="muted small">Deployment</span>
+              </div>
+              <h3>Model API + Website</h3>
+              <p class="muted">
+                Serve a trained model via FastAPI, add a simple UI, and deploy to a cloud platform.
+              </p>
+              <div class="project__links">
+                <a class="link" href="#" target="_blank" rel="noreferrer">Spec</a>
+                <a class="link" href="#" target="_blank" rel="noreferrer">Roadmap</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section id="notes" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2>Notes</h2>
+            <p class="muted">Short write-ups so I remember what I learned.</p>
+          </div>
+
+          <div class="grid grid--2">
+            <div class="card">
+              <h3>Latest note</h3>
+              <p class="muted small">Feb 14, 2026</p>
+              <p>
+                <strong>Bias vs Variance:</strong> I track training vs validation error, then decide whether to add
+                features, regularize, or get more data.
+              </p>
+              <button class="btn btn--small" id="addNoteBtn" type="button">Add a sample note</button>
+            </div>
+
+            <div class="card">
+              <h3>Note feed</h3>
+              <ul id="noteFeed" class="feed">
+                <li>
+                  <span class="feed__title">Regularization intuition</span>
+                  <span class="feed__meta muted">L2 penalty reduces variance</span>
+                </li>
+                <li>
+                  <span class="feed__title">Train/val/test split</span>
+                  <span class="feed__meta muted">Avoid leakage, keep test untouched</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2>Contact</h2>
+            <p class="muted">Want to collaborate or review a project?</p>
+          </div>
+
+          <div class="grid grid--2">
+            <div class="card">
+              <h3>Links</h3>
+              <ul class="list">
+                <li><a class="link" href="#" target="_blank" rel="noreferrer">GitHub</a></li>
+                <li><a class="link" href="#" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                <li><a class="link" href="mailto:you@example.com">you@example.com</a></li>
+              </ul>
+              <p class="muted small">
+                Replace placeholders with your real links.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Message</h3>
+              <form id="contactForm" class="form">
+                <label>
+                  Name
+                  <input name="name" type="text" placeholder="Your name" required />
+                </label>
+                <label>
+                  Message
+                  <textarea name="message" rows="4" placeholder="What’s up?" required></textarea>
+                </label>
+                <button class="btn" type="submit">Send</button>
+                <p id="formStatus" class="muted small" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <span class="muted small">© <span id="year"></span> Your Name</span>
+          <a class="link small" href="#top">Back to top ↑</a>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
